@@ -1,25 +1,29 @@
 import { Component } from 'react';
-import { SearchContainer } from './SearchContainer.styled';
+import { SearchHeader } from './SearchHeader.styled';
 import { SearchForm } from 'components/Searchbar/SearchForm.styled';
 import { SearchFormButton } from './SearchFormButton.styled';
-import { SearchFormLabel } from './SearchFormLabel.styled';
+import { SearchFormButtonLabel } from './SearchFormButtonLabel.styled';
 import { SearchFormInput } from './SearchFormInput.styled';
+import { BiSearch } from 'react-icons/bi';
 
 export class Searchbar extends Component {
-  state = {
-    currentQuery: '',
-  };
-
   render() {
     return (
-      <SearchContainer>
-        <SearchForm>
-          <SearchFormButton />
-          <SearchFormLabel>
-            <SearchFormInput />
-          </SearchFormLabel>
+      <SearchHeader>
+        <SearchForm onSubmit={this.props.onSubmit}>
+          <SearchFormButton type="submit">
+            <BiSearch />
+            <SearchFormButtonLabel>Search</SearchFormButtonLabel>
+          </SearchFormButton>
+          <SearchFormInput
+            type="text"
+            name="searchQuery"
+            autocomplete="off"
+            autoFocus
+            placeholder="Search images and photos"
+          />
         </SearchForm>
-      </SearchContainer>
+      </SearchHeader>
     );
   }
 }

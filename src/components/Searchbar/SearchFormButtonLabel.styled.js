@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SearchFormLabel = styled.label`
+export const SearchFormButtonLabel = styled.span`
   position: absolute;
   width: 1px;
   height: 1px;

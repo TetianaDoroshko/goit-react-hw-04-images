@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SearchContainer = styled.div`
+export const SearchHeader = styled.header`
   top: 0;
   left: 0;
   position: sticky;
