@@ -5,6 +5,7 @@ export const SearchHeader = styled.header`
   left: 0;
   position: sticky;
   z-index: 1100;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
